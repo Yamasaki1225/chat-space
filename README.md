@@ -1,5 +1,4 @@
 ## usersテーブル
-<<<<<<< HEAD
 
 |Column|Type|Options|
 |:------|:----|:-------|
@@ -10,7 +9,6 @@
 - has_many :message
 - has_many :members
 - has_many :group, through :members
-
 
 ## groupテーブル
 
@@ -58,6 +56,20 @@ _ has_many :groups, through: members
 |user_id|integer|null: false, foreign_key: true
 |group_id|integer|null: false, foreign_key: true|
 =======
+=======
+|Column|Type|Options|
+|:------|----:|:-------:|
+|name|text|null: false, index: true
+|email|text|null: false, unique: true
+
+### Association
+- has_many :messages
+- has_many :members
+_ has_many :groups, through: members
+
+##messageテーブル
+|Column|Type|Options|
+>>>>>>> origin/edit_markdpwn
 |:------|----:|:-------:|
 |body|text|null: false
 |image|string|null: false
@@ -83,7 +95,6 @@ _ has_many :groups, through: members
 |:------|----:|:-------:|
 |user_id|integer|null: false, foreign_key: true
 |group_id|integer|null: false, foreign_key: true
->>>>>>> origin/edit_markdpwn
 
 ### Association
 - belongs_to :group
