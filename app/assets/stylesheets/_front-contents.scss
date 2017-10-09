@@ -56,10 +56,11 @@
     &__form {
       background-color: white;
       height: 85px;
-      width: 85%;
+      width: 60%;
       float: left;
       border: none;
       display: block;
+      position: absolute;
 
       .text {
         width: 100%;
@@ -67,11 +68,9 @@
       }
 
       .fa-picture-o {
-       top: 40px;
-       right: 190px;
-       display: inline;
-       float: right;
-       padding-right: 30px;
+        bottom: 55px;
+        left: 95%;
+        position: relative;
 
      }
     }
