@@ -18,6 +18,7 @@
 
       &__name {
         font-size: 12px;
+        color: #c0c0c0;
       }
     }
 
@@ -35,57 +36,74 @@
 
   &__center {
     background-color: #F5F5F5;
-    height: calc(100vh - (135px + 100px));
+    height: calc(100vh - (125px + 100px));
     padding: 35px 0 0 40px;
     display: block;
 
-    p {
-      text-align: left;
+    &__user{
+      width: calc(100vw - 380px);
+      height: calc(100vw - 90vw);
+
+      &__name {
+        float: left;
+        width: 100%;
+
+        h3 {
+        font-size: 16px;
+        display: inline-block;
+        }
+
+        p {
+        display: inline-block;
+        color: #c0c0c0;
+        padding-left: 10px;
+        font-size: 12px;
+        }
+
+      &__message {
+      }
+      }
     }
 
-    &__name {
-      padding-bottom: 40px;
-    }
   }
 
   &__footer {
     background-color: #D3D3D3;
-    height: 60px;
+    height: 50px;
+    width: calc(100vw - 380px);
     padding: 20px 40px;
-
     &__form {
-      background-color: white;
       height: 50px;
-      width: 60%;
-      float: left;
-      border: none;
-      display: block;
-      position: absolute;
-      min-width: 50px;
+      width: calc(100vw - 380px);;
+      // position: absolute;
+      &__comment {
+        height: 50px;
+        width: calc(100% - 95px);
+        float: left;
 
-      .text {
-        width: 100%;
-        height: 100%;
+        .text {
+         width: 100%;
+         height: 100%;
+         float: left;
+        }
       }
 
-      .fa-picture-o {
-        bottom: 40px;
-        left: 95%;
-        position: relative;
-
+      &__send {
+        color: white;
+        margin-left: 15px;
+        background-color: #38AEF0;
+        font-size: 20px;
+        width: 60px;
+        height: 54px;
+        float: left;
       }
-    }
-    &__send {
-      background-color: #38AEF0;
-      color: white;
-      font-size: 20px;
-      height: 50px;
-      float: right;
-      border: none;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: calc(10vw - 50px);
     }
   }
+}
+
+.fa-picture-o {
+  display: block;
+  position: relative;
+  top: 13px;
+  right: 110px;
 }

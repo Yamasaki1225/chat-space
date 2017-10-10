@@ -26,18 +26,23 @@
           %p Member: ユーザーネーム
       .front-contents__top__right  Edit
     .front-contents__center
-      .front-contents__center__name
-      %p
-        ユーザーネーム  2017/10/7 12:55:34
-      .front-cntents__center__message
-      %p メッセージはありません
-      .front-contents__center__name
-      %p
-        ユーザーネーム  2017/10/7 12:55:34
-      .front-cntents__center__message
-      %p メッセージはありません
+      .front-contents__center__user
+        .front-contents__center__user__name
+          %h3 ユーザーネーム
+          %p 2017/10/7 12:55:34
+        .front-cntents__center__user__message
+          %p メッセージはありません
+      .front-contents__center__user
+        .front-contents__center__user__name
+          %h3 ユーザーネーム
+          %p 2017/10/7 12:55:34
+        .front-cntents__center__user__message
+          %p メッセージはありません
+
     .front-contents__footer
       .front-contents__footer__form
-        %input.text{placeholder: 'type a message', type: 'text'}/
+        .front-contents__footer__form__comment
+          %input.text{placeholder: 'type a message', type: 'text'}
+        .front-contents__footer__form__send
+          %p Send
         %i.fa.fa-picture-o{'aria-hidden': 'true'}
-      .front-contents__footer__send Send
