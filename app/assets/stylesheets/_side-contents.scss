@@ -1,0 +1,53 @@
+.side-contents {
+  background-color: #2F3e51;
+  color: #FFFFFF;
+  width: 300px;
+  height: 100vh;
+  float: left;
+
+
+  &__top {
+    background-color: #253141;
+    padding: 0 20px;
+    height: 100px;
+    display: block;
+
+    p {
+     font-size: 16px;
+     font-weight: bold;
+     padding: 35px 0 20px 0;
+     display: inline;
+     float: left;
+    }
+
+    a {
+      .fa-pencil-square-o {
+         color: white;
+         display: inline;
+         float: right;
+         padding-left: 100px;
+      }
+
+      .fa-cog {
+        color: white;
+        display: inline;
+        float:right;
+      }
+    }
+  }
+
+  &__bottom {
+    width: 300px;
+    padding: 20px 20px 0 20px;
+
+    &__group {
+      font-size: 15px;
+      padding-top: 20px;
+    }
+
+    &__comment {
+      font-size: 11px;
+      padding-top: 5px;
+    }
+  }
+}
