@@ -35,7 +35,7 @@
 
   &__center {
     background-color: #F5F5F5;
-    height: calc(100vh - 175px - 90px);
+    height: calc(100vh - (135px + 100px));
     padding: 35px 0 0 40px;
     display: block;
 
@@ -50,17 +50,18 @@
 
   &__footer {
     background-color: #D3D3D3;
-    height: 90px;
+    height: 60px;
     padding: 20px 40px;
 
     &__form {
       background-color: white;
-      height: 85px;
-      width: 60%;
+      height: 50px;
+      width: calc(100vw - 100px)
       float: left;
       border: none;
       display: block;
       position: absolute;
+      min-width: 50px;
 
       .text {
         width: 100%;
@@ -68,23 +69,23 @@
       }
 
       .fa-picture-o {
-        bottom: 55px;
+        bottom: 40px;
         left: 95%;
         position: relative;
 
-     }
+      }
     }
     &__send {
       background-color: #38AEF0;
       color: white;
       font-size: 20px;
-      height: 90px;
-      width: 15%;
+      height: 50px;
       float: right;
       border: none;
       display: flex;
       align-items: center;
       justify-content: center;
+      width: calc(10vw - 50px);
     }
   }
 }
