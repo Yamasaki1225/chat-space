@@ -9,11 +9,7 @@ class UsersController < ApplicationController
     if @user.update(user_params)
       redirect_to :root
     else
-<<<<<<< Updated upstream
       render :edit
-=======
-      render :edith
->>>>>>> Stashed changes
     end
   end
 
