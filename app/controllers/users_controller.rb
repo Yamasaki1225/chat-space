@@ -9,7 +9,7 @@ class UsersController < ApplicationController
     if @user.update(user_params)
       redirect_to :root
     else
-      edit
+      render :edit
     end
   end
 
