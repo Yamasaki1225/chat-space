@@ -2,7 +2,6 @@ class UsersController < ApplicationController
   before_action :set_user, only: [:edit, :update]
 
   def edit
-    @user = set_user
   end
 
   def update
@@ -10,6 +9,8 @@ class UsersController < ApplicationController
     @user.update(user_params)
     if @user.update(user_params)
       redirect_to :root
+    else
+      edit
     end
   end
 
