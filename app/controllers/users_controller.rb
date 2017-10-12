@@ -5,7 +5,6 @@ class UsersController < ApplicationController
   end
 
   def update
-    @user = set_user
     @user.update(user_params)
     if @user.update(user_params)
       redirect_to :root
