@@ -1,0 +1,9 @@
+.groups
+  = link_to  root_path do
+    .groups__name
+      %h3
+        = group.name
+    .groups__message
+      %p
+        メッセージはありません
+        / = group.messages.last

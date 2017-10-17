@@ -10,13 +10,7 @@
         %a{href: '/users/1/edit/'}
           %i.fa.fa-cog
     .side-contents__bottom
-      .side-contents__bottom__group グループネーム
-      .side-contents__bottom__comment 最新のコメント
-      .side-contents__bottom__group グループネーム
-      .side-contents__bottom__comment 最新のコメント
-      .side-contents__bottom__group グループネーム
-      .side-contents__bottom__comment 最新のコメント
-
+      = render partial: "side-contents-bottom", collection: @groups, as: "group"
   .front-contents
     .front-contents__top
       .front-contents__top__left
