@@ -10,8 +10,7 @@
         %a{href: '/users/1/edit/'}
           %i.fa.fa-cog
     .side-contents__bottom
-      - if user_signed_in?
-      = render partial: "groups/index", locals: { groups: @groups }
+      = render partial: "groups/group", locals: { groups: @groups }
 
   .front-contents
     .front-contents__top
