@@ -4,10 +4,10 @@
       .side-contents__top__name
         = current_user.name
       %p
-        %a{href: ''}
+        %a{href: new_group_path }
           %i.fa.fa-pencil-square-o
       %p
-        %a{href: '/users/1/edit/'}
+        %a{href: edit_user_path(current_user.id)}
           %i.fa.fa-cog
     .side-contents__bottom
       = render partial: "groups/group", locals: { groups: @groups }
