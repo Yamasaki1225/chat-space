@@ -39,8 +39,10 @@
 
     .front-contents__footer
       .front-contents__footer__form
+      = form_for [@group,@message] do |f|
         .front-contents__footer__form__comment
-          %input.text{placeholder: 'type a message', type: 'text'}
+        = f.text_field :body, placeholder: 'type a message', type: 'text'}
         .front-contents__footer__form__send
-          %p Send
+        = f.submit 'Send'
         %i.fa.fa-picture-o{'aria-hidden': 'true'}
+        = f.file_field :image
