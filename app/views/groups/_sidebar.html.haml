@@ -1,0 +1,20 @@
+.contents
+  .side-contents
+    .side-contents__top
+      .side-contents__top__name
+        = current_user.name
+      %p
+        %a{href: new_group_path }
+          %i.fa.fa-pencil-square-o
+      %p
+        %a{href: edit_user_path(current_user.id)}
+          %i.fa.fa-cog
+    .side-contents__bottom
+      .side-contents__bottom__groups
+        - groups.each do |group|
+          .side-contents__bottom__groups__set
+            = link_to group_messages_path(group.id) do
+              .side-contents__bottom__groups__set__name
+                = group.name
+              .side-contents__bottom__groups__set__message
+                %p メッセージはありません

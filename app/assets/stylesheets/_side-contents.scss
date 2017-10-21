@@ -1,6 +1,5 @@
 .side-contents {
   background-color: #2F3e51;
-  color: #FFFFFF;
   width: 300px;
   height: 100vh;
   float: left;
@@ -12,6 +11,7 @@
     display: block;
 
     &__name {
+    color: white;
     font-size: 16px;
     padding-top: 30px;
     padding-left: 30px;
@@ -44,28 +44,31 @@
 
   &__bottom {
     width: 300px;
-    height: calc(100vh - 100px);
+    height: calc(100vh - 120px);
     padding-top: 20px;
     padding-left: 20px;
+    font-size: 15px;
 
-    .groups {
-        a{
-          color: white;
+    &__groups {
+
+      &__set {
+        padding-bottom: 40px;
+
+        &__name {
           font-size: 15px;
-          padding: 20px;
-          text-decoration: none;
         }
-          &__name {
-            p{
-              font-size: 15px;
-              color: red;
-            }
-          }
 
-          &__message {
-            font-size: 11px;
-          }
-     }
+        &__message {
+          font-size: 11px;
+        }
+      }
+
+      a {
+        color: white;
+        text-decoration: none;
+        padding-bottom: 5px;
+      }
+    }
 
   }
 }
