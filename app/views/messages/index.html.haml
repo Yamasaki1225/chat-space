@@ -4,25 +4,22 @@
   .front-contents__top
     .front-contents__top__left
       .front-contents__top__left__group
-        %p グループネーム
+        = @group.name
       .front-contents__top__left__name
-        %p Member: ユーザーネーム
+        = current_user.name
     .front-contents__top__right
       %a{href: '/groups/1/edit'}
         %p Edit
   .front-contents__center
-    .front-contents__center__user
-      .front-contents__center__user__name
-        %h3 ユーザーネーム
-        %p 2017/10/7 12:55:34
-      .front-cntents__center__user__message
-        %p メッセージはありません
-    .front-contents__center__user
-      .front-contents__center__user__name
-        %h3 ユーザーネーム
-        %p 2017/10/7 12:55:34
-      .front-cntents__center__user__message
-        %p メッセージはありません
+    -  @messages.each do |message|
+      .front-contents__center__user
+        .front-contents__center__user__name-time
+          .front-contents__center__user__name-time__name
+            = message.user.name
+          .front-contents__center__user__name-time__time
+            = message.created_at.strftime("%Y/%m/%d %H:%M:%S")
+          .front-contents__center__user__message
+            = message.body
 
   .front-contents__footer
     .front-contents__footer__form
