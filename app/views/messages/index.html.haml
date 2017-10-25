@@ -1,46 +1,34 @@
-.contents
-  .side-contents
-    .side-contents__top
-      .side-contents__top__name
-      %p ユーザーネーム
-      %p
-        %a{href: ''}
-          %i.fa.fa-pencil-square-o
-      %p
-        %a{href: '/users/1/edit/'}
-          %i.fa.fa-cog
-    .side-contents__bottom
-      - if user_signed_in?
-      = render partial: "groups/index", locals: { groups: @groups }
+= render partial: "groups/sidebar", locals: { groups: @groups}
 
-  .front-contents
-    .front-contents__top
-      .front-contents__top__left
-        .front-contents__top__left__group
-          %p グループネーム
-        .front-contents__top__left__name
-          %p Member: ユーザーネーム
-      .front-contents__top__right
-        %a{href: '/groups/1/edit'}
-          %p Edit
-    .front-contents__center
+.front-contents
+  .front-contents__top
+    .front-contents__top__left
+      .front-contents__top__left__group
+        = @group.name
+      .front-contents__top__left__name
+        = current_user.name
+    .front-contents__top__right
+      %a{href: '/groups/1/edit'}
+        %p Edit
+  .front-contents__center
+    -  @messages.each do |message|
       .front-contents__center__user
-        .front-contents__center__user__name
-          %h3 ユーザーネーム
-          %p 2017/10/7 12:55:34
-        .front-cntents__center__user__message
-          %p メッセージはありません
-      .front-contents__center__user
-        .front-contents__center__user__name
-          %h3 ユーザーネーム
-          %p 2017/10/7 12:55:34
-        .front-cntents__center__user__message
-          %p メッセージはありません
+        .front-contents__center__user__name-time
+          .front-contents__center__user__name-time__name
+            = message.user.name
+          .front-contents__center__user__name-time__time
+            = message.created_at.strftime("%Y/%m/%d %H:%M:%S")
+          .front-contents__center__user__message
+            = message.body
 
-    .front-contents__footer
-      .front-contents__footer__form
+  .front-contents__footer
+    .front-contents__footer__form
+      = form_for [@group,@message] do |f|
         .front-contents__footer__form__comment
-          %input.text{placeholder: 'type a message', type: 'text'}
+          = f.text_field :body, placeholder: 'type a message', type: 'text'
+          .image
+            = f.file_field :image, class:"icon"
         .front-contents__footer__form__send
-          %p Send
-        %i.fa.fa-picture-o{'aria-hidden': 'true'}
+          = f.submit 'Send', class:'button'
+        = f.label :image do
+          %i.fa.fa-picture-o
