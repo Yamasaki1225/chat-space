@@ -39,7 +39,7 @@
   }
 
   &__center {
-    background-color: #F5F5F5;
+    background-color: $front-senter-color;
     height: calc(100vh - (125px + 100px));
     padding: 35px 0 0 40px;
     display: block;
@@ -101,7 +101,7 @@
       &__send {
         color: white;
         margin-left: 15px;
-        background-color: #38AEF0;
+        background-color: $bluecolor;
         font-size: 20px;
         width: 60px;
         height: 54px;
