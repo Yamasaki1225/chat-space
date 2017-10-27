@@ -1,3 +1,6 @@
 require 'rails_helper'
 
-describe MessagesContoroller
+describe messagescontoroller do |
+  |
+
+end
