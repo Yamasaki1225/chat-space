@@ -1,5 +1,4 @@
 require 'rails_helper'
-require 'pry'
 
 describe MessagesController do
   let(:user){ create(:user) }
@@ -18,7 +17,6 @@ describe MessagesController do
       it "assigns the requested group to @group" do
         expect(assigns(:group)).to eq group
       end
-      # binding.pry
 
       it "assigns the requested group to @message" do
         expect(assigns(:message)).to be_a_new Message
@@ -64,7 +62,7 @@ describe MessagesController do
       it "is not saved on Data Base although user_rogin" do
       expect do
         post :create, params: { group_id: group, message: attributes_for(:message, body: nil, image: nil) }
-        # binding.pry
+
       end.to change(Message, :count).by(0)
       end
 
