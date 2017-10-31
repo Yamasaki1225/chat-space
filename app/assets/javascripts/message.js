@@ -25,7 +25,6 @@ $(function(){
     var url = location.href;
 
     console.log(formData)
-    // console.log(url)
 
     $.ajax({
       url: url,
