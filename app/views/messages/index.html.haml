@@ -11,16 +11,17 @@
       %a{href: '/groups/1/edit'}
         %p Edit
   .front-contents__center
-    -  @messages.each do |message|
-      .front-contents__center__user
-        .front-contents__center__user__name-time
-          .front-contents__center__user__name-time__name
-            = message.user.name
-          .front-contents__center__user__name-time__time
-            = message.created_at.strftime("%Y/%m/%d %H:%M:%S")
-          .front-contents__center__user__message
-            = message.body
-            = image_tag message.image
+    .front-contents__center__user__content
+      -  @messages.each do |message|
+        .front-contents__center__user
+          .front-contents__center__user__name-time
+            .front-contents__center__user__name-time__name
+              = message.user.name
+            .front-contents__center__user__name-time__time
+              = message.created_at.strftime("%Y/%m/%d %H:%M:%S")
+            .front-contents__center__user__message
+              = message.body
+              = image_tag message.image
 
   .front-contents__footer
     .front-contents__footer__form
@@ -28,8 +29,9 @@
         .front-contents__footer__form__comment
           = f.text_field :body, placeholder: 'type a message', type: 'text'
           .image
-            = f.file_field :image, class:"icon"
-        .front-contents__footer__form__send
-          = f.submit 'Send', class:'button'
+            = f.file_field :image, class: "icon"
+        .front-contents__footer__form__sendwrapper
+          = f.submit 'Send', class: 'front-contents__footer__form__send', id: 'test_message'
         = f.label :image do
           %i.fa.fa-picture-o
+Ï
