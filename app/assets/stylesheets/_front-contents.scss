@@ -38,11 +38,15 @@
     }
   }
 
+&__content {
+
+}
   &__center {
     background-color: $front-senter-color;
     height: calc(100vh - (125px + 100px));
     padding: 35px 0 0 40px;
     display: block;
+    overflow-y: scroll;
 
     &__user {
       padding-bottom: 40px;
