@@ -24,8 +24,6 @@ $(function(){
     var formData = new FormData(this);
     var url = location.href;
 
-    console.log(formData)
-
     $.ajax({
       url: url,
       type: "POST",
@@ -34,10 +32,9 @@ $(function(){
       processData: false,
       contentType: false
     })
+
     .done(function (data){
-      console.log(data)
       var html = buildHTML(data);
-       console.log(html);
       $('.front-contents__center').append(html);
       $('.front-contents__footer__form__send').prop('disabled', false);
       $('#message_body').val("");
