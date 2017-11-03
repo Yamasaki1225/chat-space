@@ -35,7 +35,6 @@ $(document).on('turbolinks:load', function() {
     })
 
     .done(function (data){
-      console.table(data)
       var html = buildHTML(data);
       $('.front-contents__center').append(html);
       $('.front-contents__footer__form__send').prop('disabled', false);
@@ -61,7 +60,6 @@ $(document).on('turbolinks:load', function() {
     })
 
     .done(function(messages) {
-       console.table(messages)
 
         if(messages !== ""){
           var insertHTML = "";
