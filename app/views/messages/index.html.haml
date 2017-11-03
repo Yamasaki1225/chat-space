@@ -13,7 +13,7 @@
   .front-contents__center
     .front-contents__center__user__content
       -  @messages.each do |message|
-        .front-contents__center__user
+        .front-contents__center__user{"data-id": message.id}
           .front-contents__center__user__name-time
             .front-contents__center__user__name-time__name
               = message.user.name
