@@ -1,5 +1,6 @@
 ## usersテーブル
 
+ssss
 |Column|Type|Options|
 |:------|:----|:-------|
 |name|string|null: false, index: true
